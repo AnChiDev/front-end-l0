@@ -1,0 +1,61 @@
+*{
+  padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: inherit;/* Kế thừa giá trị thuộc tính box-sizing từ phần tử cha của nó.*/
+    
+}
+html{
+    box-sizing: border-box;/*- Chiều rộng (chiều cao) được thiết lập từ thuộc tính width (height) chính là chiều rộng (chiều cao) của nguyên cả phần tử.*/
+}
+.box-a1{
+    background-color: #00b894;
+    width: 1000px;
+    height: 2000px;
+    
+}
+.box-a2{
+    background-color: #0984e3;
+    width: 500px;
+    height: 200px;
+    position: fixed;
+    top: 0;
+}
+.box-a3{
+    background-color: #ff7675;
+    width: 500px;
+    height: 200px;
+    position: fixed;
+    bottom: 0;
+}
+.box-a4{
+    background-color: #b2bec3;
+    position: relative;
+    top: 130px;
+    width: 1000px;
+    height: 1500px;
+}
+.box-a5{
+    background-color: #ffeaa7;
+    position: -webkit-sticky;
+    position: sticky;
+    height: 200px;
+    width: 500px;
+    top: calc(50% - 100px);
+    margin-left: 200px;
+}
+.box-a6{
+    background-color: #fab1a0;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+@media screen and (max-width: 780px) {
+ .box-a1, .box-a2,.box-a3, .box-a4,.box-a5{
+    width: 50%;
+ }
+  }
