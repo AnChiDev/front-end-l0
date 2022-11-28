@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1b</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style1b.css">
+</head>
+<body>
+    <div class="container" id="container1">
+        <h2>Nhập giá trị</h2>
+        <form>
+        <label for="number">
+            <input type="number" name="number" id="number" placeholder="Số cột" onchange="typeValue()">
+
+        </label>
+        <label for="width">
+            <input type="number" name="width" id="widthvalue" placeholder="Chiều rộng" onchange="typeValue()">
+
+        </label>
+        <label for="height">
+            <input type="number" name="height" id="heightvalue" placeholder="Chiều cao" onchange="typeValue()">
+  
+        </label>
+        <label for="margin">
+            <input type="number" name="margin" id="marginvalue" placeholder="Khoảng cách" onchange="typeValue()">
+            
+        </label>
+        <p id ="errorMess"></p>
+        <p id="checkvalue"></p>
+    </form>
+    </div>
+    <hr/>
+    <div class="container" id="container2">
+        <h3>Sử dụng thẻ li</h3>
+
+
+        <div class ="row" >
+            <ul class="col-12" id="the-li"></ul>
+        </div>
+    </div>
+    <hr/>
+    <div class="container" id="container3">
+        <h3>Sử dụng thẻ span</h3>
+        <div class="row">
+            <div class ="col-12" id="the-span"></div>
+        </div>
+      
+    </div>
+    <hr/>
+ 
+  
+<script type="text/javascript">
+
+function typeValue() {
+
+    var number = document.getElementById('number').value;
+    var chieurong=document.getElementById('widthvalue').value;
+    var chieudai=document.getElementById('heightvalue').value;
+    var khoangcach=document.getElementById('marginvalue').value;
+    var flag = true;
+// document.getElementById('checkvalue').innerHTML = number + ' '+ chieurong +' '+ chieudai+ ' '+ khoangcach;
+    if(number < 0 && number != null&& isNaN(number)){
+        document.getElementById('errorMess').innerHTML="Yêu cầu nhập";
+        flag = false;
+    } 
+    if(chieurong< 0 && chieurong != null &&isNaN(chieurong)){
+        document.getElementById('errorMess').innerHTML="Yêu cầu nhập";
+        flag = false;
+    }
+    if(chieudai < 0 && chieudai!= null &&isNaN(chieudai)){
+        document.getElementById('errorMess').innerHTML="Yêu cầu nhập";
+        flag = false;
+    }
+    if(khoangcach < 0 && khoangcach != null &&isNaN(khoangcach)){
+        document.getElementById('errorMess').innerHTML="Yêu cầu nhập";
+        flag = false;
+    }
+
+    if (flag){ 
+        if(number!=null){
+            var html="";
+            var htmlspan="";
+            for(let i = 0 ; i < number; i++){
+                html += '<li></li>';
+                htmlspan += '<span></span>';
+            }
+            document.getElementById("the-li").innerHTML=html;
+            document.getElementById("the-span").innerHTML=htmlspan;
+        }
+        if(chieurong !=null){
+            const li = document.getElementsByTagName('li');
+            const span = document.getElementsByTagName('span');
+            for (let i = 0; i <li.length; i++){
+                li[i].style.width= chieurong+"px";
+            }
+            for (let i = 0; i <li.length; i++){
+                span[i].style.width=chieurong+"px";
+            }
+        }
+        if(chieudai !=null){
+            const li = document.getElementsByTagName('li');
+            const span = document.getElementsByTagName('span');
+            for (let i = 0; i <li.length; i++){
+                li[i].style.height= chieudai+"px";
+            }
+            for (let i = 0; i <li.length; i++){
+                span[i].style.height=chieudai+"px";
+            }
+        }
+        if(khoangcach !=null){
+            const li = document.getElementsByTagName('li');
+            const span = document.getElementsByTagName('span');
+            for (let i = 0; i <li.length; i++){
+                li[i].style.margin= khoangcach+"px";
+            }
+            for (let i = 0; i <li.length; i++){
+                span[i].style.margin=khoangcach+"px";
+            }
+        }
+}
+}
+
+</script>
+</body>
+</html>
