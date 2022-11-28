@@ -1,0 +1,157 @@
+@media screen and (min-width: 240px){
+  body {font-family: Arial, Helvetica, sans-serif;}
+h3{
+    text-align: center;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 40px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width:90%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+.close {
+  float: right;
+  padding-right: 1%;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+    }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  .modal-footer{
+      text-align: center;
+      background-color:#f1f1f1;
+      display: block;
+  }
+  .modal-footer a{
+      color: #2d3436;
+      display:block;
+  }
+  
+  
+  .input-icons i {
+    position: absolute;
+  }
+  
+  .input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    padding: 20px;
+    min-width: 40px;
+  }
+  
+  #login-button{
+    width: auto;
+  }
+  #text-uname, #text-psw,#text-newpsw, #text-newpsw, #text-oldpsw{
+    color: red;
+  }
+  #change-pass, #change-pass-footer{
+    display: none;
+  }
+  
+}
+/*Iphone(480 x 640)*/
+@media screen and (min-width: 320px){
+    
+}
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (min-width: 480px){
+  .modal-content {
+   
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+}
+/*Ipad dọc(768 x 1024)*/
+@media screen and (min-width: 768px){
+  .modal-content {
+   
+    width: 40%; /* Could be more or less, depending on screen size */
+  }
+
+}
+/*Ipad ngang(1024 x 768)*/
+@media screen and (min-width: 1024px){
+  .modal-footer a{
+ 
+    display:inline;
+  }
+  .modal-content {
+    
+    width: 30%; /* Could be more or less, depending on screen size */
+  }
+}
+

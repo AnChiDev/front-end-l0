@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - HTML CSS JS</title>
+  <script src="https://kit.fontawesome.com/18aefe4ebb.js" crossorigin="anonymous"></script>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <button onclick="Toggle()" id="login-button">Đăng nhập hệ thống</button>
+
+  <p id="check"></p>
+  <div id="id01" class="modal">
+    
+    <form class="modal-content animate" id="form-login">
+
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal" id="close">&times;</span>
+      <h3>Member Login</h3>
+
+      <div class="container">
+        <div class="input-icons">
+          <i class="fa fa-user icon"></i>
+          <input type="text" placeholder="Username" name="uname" id="uname" class="input-field" > 
+          <p id="text-uname"></p>
+        </div>
+
+        <div class="input-icons">
+          <i class="fa-solid fa-lock icon"></i>
+          <input type="password" placeholder="Password" name="psw" id="psw" class="input-field" >
+          <p id="text-psw"></p>
+        </div>
+        <button type="submit" id="submit" onclick="loading()">Login</button>
+      </div>
+
+      <div class="container modal-footer">
+     
+        <a href="#">Forgot your password?</a>
+      </div>
+    </form>
+
+  </div>
+
+  <script type="text/javascript" src="./main.js"> </script>
+</body>
+</html>
