@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding:0;
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) {
+  li{
+    display: inline-block;
+  }
+  li:nth-child(2n){
+    background-color:#27ae60;
+    width: 30px;
+    height: 30px;
+
+  }
+  li:nth-child(2n+1){
+   
+    background-color:#e74c3c;
+    width: 20px;
+    height: 30px;
+  }
+  
+}
+@media screen and (min-width: 425px) {
+  
+  li:nth-child(2n){
+    background-color:#e74c3c;
+    width: 50px;
+  }
+  li:nth-child(2n+1){
+   
+    background-color: #f1c40f;
+    width: 20px;
+  }
+  
+}
+@media screen and (min-width: 768px) {
+  
+  li:nth-child(2n){
+    background-color: #f1c40f;
+    width: 40px;
+  }
+  li:nth-child(2n+1){
+   
+    background-color: #218c74;
+    width: 30px;
+  }
+  
+}
+/*Màn hình width 992px: phần tử lẻ màu vàng  with 30px, phần tử chẵn màu tím with-40px*/
+
+@media screen and (min-width: 992px) {
+  
+  li:nth-child(2n){
+    background-color: #8854d0;
+    width: 40px;
+  }
+  li:nth-child(2n+1){
+    background-color: #f1c40f;
+    width: 30px;
+  }
+  
+}
+
+/*Màn hình width 1200: phần tử lẻ màu tím with 50px, phần tử chẵn màu hồng with-100px*/
+@media screen and (min-width: 1200px) {
+
+  li:nth-child(2n){
+    background-color: #fd79a8;
+    width: 100px;
+  }
+  li:nth-child(2n+1){
+    background-color: #8854d0;
+    width: 40px;
+  }
+  
+}
