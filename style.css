@@ -20,6 +20,7 @@ html{
     height: 200px;
     position: fixed;
     top: 0;
+    z-index: 3;
 }
 .box-a3{
     background-color: #ff7675;
@@ -27,6 +28,7 @@ html{
     height: 200px;
     position: fixed;
     bottom: 0;
+    z-index: 3;
 }
 .box-a4{
     background-color: #b2bec3;
@@ -39,7 +41,7 @@ html{
     background-color: #ffeaa7;
     position: -webkit-sticky;
     position: sticky;
-    height: 200px;
+    height: 500px;
     width: 500px;
     top: calc(50% - 100px);
     margin-left: 200px;
