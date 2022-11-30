@@ -9,7 +9,7 @@ form.addEventListener("submit", function (e) {
 function Toggle() {
   clear();
   document.getElementById("login-button").innerHTML = "Đăng nhập hệ thống";
-
+  document.getElementById("result").innerHTML ="";
   document.getElementById("id01").style.display = "block";
 
   var modal = document.getElementById("id01");
@@ -36,6 +36,7 @@ function clear() {
   document.getElementById("text-psw").innerHTML = "";
   document.getElementById("text-newpsw").innerHTML = "";
   document.getElementById("text-oldpsw").innerHTML = "";
+
 }
 //validate form - đăng nhập - đã đăng nhập thành công
 function handleLogin() {
@@ -125,6 +126,7 @@ function ChangePass() {
 
 
 function ChangeValidate() {
+
    //get value
   var oldpassword = document.getElementById("oldpsw").value;
   var newpass = document.getElementById("newpsw").value;
@@ -196,6 +198,7 @@ function back() {
 function clearChangePass(){
   clear();
   document.getElementById("submitChange").innerHTML = "Login";
+ 
 }
 
 //back lại modal login
