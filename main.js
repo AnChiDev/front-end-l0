@@ -1,3 +1,4 @@
+//Click button mở modal
 const form = document.getElementById("form-login");
 form.addEventListener("submit", function (e) {
   // prevent the form from submitting
@@ -6,6 +7,7 @@ form.addEventListener("submit", function (e) {
 
 //open and close modal
 function Toggle() {
+  clear();
   document.getElementById("login-button").innerHTML = "Đăng nhập hệ thống";
 
   document.getElementById("id01").style.display = "block";
@@ -18,26 +20,39 @@ function Toggle() {
     }
   };
 }
-//clear input
-function clear() {
-  document.getElementById("submit").innerHTML = "Login";
-  document.getElementById("uname").value = "";
-  document.getElementById("psw").value = "";
-  document.getElementById("newpsw").value = "";
-  document.getElementById("text-uname").innerHTML = "";
-  document.getElementById("text-psw").innerHTML = "";
-  document.getElementById("text-newpsw").innerHTML = "";
-}
+
 //global variables
 const id = "admin";
 let pass = "admin";
 let newpass;
-//validate form
+
+//clear input and value 
+function clear() {
+  document.getElementById("uname").value = "";
+  document.getElementById("psw").value = "";
+  document.getElementById("oldpsw").value = "";
+  document.getElementById("newpsw").value = "";
+  document.getElementById("text-uname").innerHTML = "";
+  document.getElementById("text-psw").innerHTML = "";
+  document.getElementById("text-newpsw").innerHTML = "";
+  document.getElementById("text-oldpsw").innerHTML = "";
+}
+//validate form - đăng nhập - đã đăng nhập thành công
 function handleLogin() {
-  //default  id and password
+  //get value id and password
   var username = document.getElementById("uname").value;
   var password = document.getElementById("psw").value;
 
+  if (username.trim().length == 0 &&password.trim().length == 0) {
+    document.getElementById("text-uname").innerHTML = "Yêu cầu nhập";
+    document.getElementById("uname").focus();
+    document.getElementById("text-psw").innerHTML = "Yêu cầu nhập";
+    document.getElementById("psw").focus();
+    return false;
+  }else {
+    document.getElementById("text-uname").innerHTML = "";
+    document.getElementById("text-psw").innerHTML = "";
+  }
   if (username.trim().length == 0) {
     document.getElementById("text-uname").innerHTML = "Yêu cầu nhập";
     document.getElementById("uname").focus();
@@ -55,6 +70,14 @@ function handleLogin() {
   }
 
   //case wrong pass or id
+  if (username !== id && username !== null && password !== pass && password !== null) {
+    document.getElementById("text-uname").innerHTML = "Sai ten dang nhap";
+    document.getElementById("text-psw").innerHTML = "Sai mat khau";
+    return false;
+  } else {
+    document.getElementById("text-uname").innerHTML = "";
+    document.getElementById("text-psw").innerHTML = "";
+  }
   if (username !== id && username !== null) {
     document.getElementById("text-uname").innerHTML = "Sai ten dang nhap";
     return false;
@@ -76,6 +99,7 @@ function handleLogin() {
     clear();
   }
 }
+//submit đăng nhập
 function loading() {
   document.getElementById("submit").innerHTML = "Loading.....";
   setTimeout(function () {
@@ -84,32 +108,42 @@ function loading() {
   }, 1000);
 }
 
+//change pass -> đổi giao diện
 function ChangePass() {
-  document.getElementById("submitChange").innerHTML = "Loading.....";
-
-  setTimeout(function () {
-    ChangeValidate();
-    document.getElementById("submit").innerHTML = "Login";
-  }, 500);
-}
-
-function ChangeValidate() {
-  //display
   document.getElementById("change-pass").style.display = "block";
   document.getElementById("log-in").style.display = "none";
   document.getElementById("text-oldpsw").style.display = "none";
   document.getElementById("footer").style.display = "none";
   document.getElementById("change-pass-footer").style.display = "block";
-
+  document.getElementById("submitChange").innerHTML = "Save";
   document.getElementById("title").innerHTML = "Change Passwords";
   document.getElementById("uname").value = "admin";
+}
 
-  //get value
+//- validate - đã đổi pass thành công
 
+
+
+function ChangeValidate() {
+   //get value
   var oldpassword = document.getElementById("oldpsw").value;
   var newpass = document.getElementById("newpsw").value;
   //validate
+  if (oldpassword.trim().length == 0&& newpass.trim().length == 0) {
+    document.getElementById("text-oldpsw").style.display="block";
+    document.getElementById("text-oldpsw").innerHTML = "Yêu cầu nhập";
+    document.getElementById("text-newpsw").style.display = "block";
+    document.getElementById("text-newpsw").innerHTML = "Yêu cầu nhập";
+    document.getElementById("newpsw").focus();
+    document.getElementById("oldpsw").focus();
+   
+    return false;
+  } else {
+    document.getElementById("text-newpsw").innerHTML = "";
+    document.getElementById("text-oldpsw").innerHTML = "";
+  }
   if (oldpassword.trim().length == 0) {
+    document.getElementById("text-oldpsw").style.display="block";
     document.getElementById("text-oldpsw").innerHTML = "Yêu cầu nhập";
     document.getElementById("oldpsw").focus();
     return false;
@@ -134,8 +168,20 @@ function ChangeValidate() {
     pass = newpass;
     document.getElementById("result").innerHTML =
       "Bạn đã đổi mật khẩu thành công";
-    back();
-  }
+      clearChangePass();
+      back();
+}
+
+}
+
+function SubmitChange(){
+  document.getElementById("submitChange").innerHTML = "Loading.....";
+
+  setTimeout(function () {
+    ChangeValidate();
+    document.getElementById("submitChange").innerHTML = "Save";
+  }, 500);
+ 
 }
 
 function back() {
@@ -146,3 +192,10 @@ function back() {
   document.getElementById("footer").style.display = "block";
   document.getElementById("change-pass-footer").style.display = "none";
 }
+
+function clearChangePass(){
+  clear();
+  document.getElementById("submitChange").innerHTML = "Login";
+}
+
+//back lại modal login

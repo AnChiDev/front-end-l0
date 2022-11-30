@@ -7,7 +7,6 @@
 <title>Login - Change password</title>
 <script src="https://kit.fontawesome.com/18aefe4ebb.js" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
 <!-- CSS only -->
 <link rel="stylesheet" href="./style.css">
 </head>
@@ -44,7 +43,6 @@
       <div class="container modal-footer" id="footer">
         <a onclick="ChangePass()" href="#">Change your password?</a>
         <a href="#">Forgot your password?</a>
-        
       </div>
  
 
@@ -60,22 +58,14 @@
         <input type="password" placeholder="New Password" name="newpsw" id="newpsw" class="input-field" >
         <p id="text-newpsw"></p>
       </div>
-      <button type="submit" id="submitChange" onclick="ChangePass()">Save</button>
+      <button type="submit" id="submitChange" onclick="SubmitChange()">Save</button>
       <P id="result"></P>
     </div>
 
-
       <div class="container modal-footer" id="change-pass-footer">
-        <a onclick="back()" href="#">Back</a>
-  
-        
+        <a onclick="back()" href="#">Back</a>   
       </div>
-
     </form>
-
-
-
-
 </div>
 
 <script type="text/javascript" src="./main.js"> </script>
