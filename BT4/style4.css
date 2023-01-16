@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Poppins:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins",sans-serif;; 
+  }
+h1{
+    text-align: left;
+    margin: 5%;
+}
+/*----------part 4---------*/
+.section_4{
+    background-color: black;
+    color: white;
+    line-height:2;
+    padding: 3%;
+    width: 80%;
+    margin: auto;
+    position: relative; 
+    display: grid;
+    justify-items: center;
+    font-family: 'Domine', serif;
+    font-size:18px;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    padding-bottom: 20px;
+}
+.section_4::before {    
+    content: "";
+    background: url("../image/moutain2.jpg") no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+}
+.section_4 p:first-of-type {
+    font-weight: 400;
+    font-size: 44px;
+}
+.section_4 i {
+    font-size: 44px;
+}
+.section_4 div{
+    text-align: center;
+    margin-top: 15px;
+}
+.section_4 p:last-of-type {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 610px) and (max-width: 991px) {
+    .section_4{
+        grid-template-columns: auto auto;
+    }
+
+}
+@media only screen and (min-width: 992px) {
+    .section_4{
+        grid-template-columns: auto auto auto auto;
+    
+    }
+    }

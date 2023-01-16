@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Roboto:wght@100;300;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+  }
+hmtl, body{
+    font-family: Helvetica,sans-serif;
+    box-sizing: border-box;
+}
+h1{
+    text-align: left;
+    margin: 5%;
+}
+/*----------part 2---------*/
+.section_2{
+    background:black;
+    color: white;
+    text-align: center;
+    line-height:3;
+    padding: 3%;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    display: flex;
+    z-index:0;
+}
+
+.section_2_text{
+    font-size: 20px;
+
+}
+.section_2 p:last-child{
+    font-size: 14px;
+}
+.background{    
+    content: "";
+    background: url("../image/umberella.png") no-repeat center center;
+    background-size:cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.section_2_button1{
+    opacity: clear;
+    background-color: rgba(207, 10, 10, 1);
+    border: none;
+    color: white;
+    margin-top: 40px;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    z-index:1;
+}
+.section_2_button1:hover{
+    background-color:#b71540;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .section_2_text{
+        font-size: 22px;
+    }
+    .section_2{
+        padding: 40px;
+    }
+    
+}
+@media only screen and (min-width: 992px) {
+    .section_2_text{
+        font-size: 25px;
+    }
+    .section_2{
+        padding: 60px;
+    }
+}

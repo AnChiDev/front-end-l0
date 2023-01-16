@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Roboto:wght@100;300;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+  }
+body{
+    font-family: 'Open Sans', sans-serif;   
+    box-sizing: border-box;
+}
+h1{
+    text-align: left;
+    margin: 5%;
+}
+ /*----------part 7---------*/
+.section_7{
+  width: 80%;
+  margin: auto;
+  line-height: 2;
+  text-align: center;
+}
+.item2{
+    display: none;
+}
+
+.section_7 img{
+  height: 220px;
+  width: 220px;
+}
+.section_7 span{
+  font-weight: bold;
+}
+.section_7 p{
+    color:#a4b0be;
+}
+.section_7 p:first-of-type{
+    font-size: 26px;
+    color: #7f8c8d;
+}
+.section_7 button{
+    color: white;
+    border-radius: 30px;
+    padding: 10px;
+   
+    margin: 15px 0;
+    border: none;
+}
+.section_7-button1{
+    background-color: #75bde1;
+    width: 270px;
+  
+}
+.section_7-button2{
+    background-color: #95d075;
+    width: 270px;
+}
+.flex1{
+    border-bottom: 1px solid #ecf0f1;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.flex2{
+    margin-top: 20px;
+}
+button:hover{
+  background-color: #12CBC4;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .section_7{
+    width: 80%;
+    margin:auto;
+  }
+  .section_7 .flex-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    overflow: auto;
+    margin-bottom: 20px;
+  }
+  .section_7-button2{
+    width: 180px;
+  }
+  .item_mobile{
+    display:none;
+  }
+  .item2{
+    display: inline-block;
+  }.
+  
+  img{
+    widh: 320px;
+    height: 320px;
+  }
+  .flex1{
+    padding-bottom: 40px;
+  }
+  .flex2{
+    padding-top: 40px;
+  }
+  .item1, .item4{
+    text-align: left; 
+    width:80%; 
+  }
+  .item1{
+    padding-right: 30px;
+    
+  }
+  .item4{
+    padding-left: 70px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  
+  .section_7 .flex-container {
+      display: grid;
+    grid-template-columns: auto auto;
+
+    margin: auto;
+  }
+  .item_mobile{
+    display:none;
+  }
+  .item2{
+    display: inline-block;
+  }
+  .section_7 img{
+    height: 320px;
+    width: 320px;
+  }
+  .section_7 p:first-of-type{
+      font-size: 32px;
+  }
+
+  .section_7-button2{
+      
+      width: 150px;
+  }
+  .flex2{
+      padding-top: 80px;
+  }
+  .item1, .item4{
+    text-align: left; 
+    width:90%; 
+  }
+  .item1{
+    padding-right: 100px;
+    
+  }
+  .item4{
+    padding-left: 100px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .section_7{
+    width: 50%;
+    margin:auto;
+  }
+
+  .item3{
+    margin-right: 120px;
+  }
+}

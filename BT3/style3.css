@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&family=Poppins:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  color: #231f20;
+  font-family: Helvetica,sans-serif;
+  font-size: 16px;
+}
+h1{
+  text-align: left;
+  margin: 5%;
+  }
+
+/*----------part 3---------*/
+.section_3{
+    background: #f2f2f2;
+    text-align: center;
+    line-height: 2;
+    width: 85%;
+    margin: auto;
+    align-items: center;   
+    padding: 20px 10px 60px 10px; 
+}
+.section_3-icon{
+    color: #70cbce;
+    border-radius: 50%;
+    width: 60px;
+    height:60px;
+    border:2px solid  #70cbce;
+    margin:2% 0;
+}
+.section_3 i{
+    font-size: 28px;
+}
+.section_3 p:last-of-type {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color:#9d9b9c;
+    margin-bottom: 15px;
+}
+.section_3 p:first-of-type {
+   font-weight: bold;
+   font-size: 35px;
+   font-family: 'Poppins', sans-serif;
+  }
+.section_3 input[type="email"]{
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  font-size: 17px;
+  padding: 20px 10px;
+  
+}
+.section_3-button2{
+  display: block;
+  color: white;
+  background-color:  #70cbce;
+  width: 80%;
+  height: 50px;
+  margin: 10px auto;
+  padding: 20px auto;
+  border-radius:5px;
+  border: 1px solid #71bec1;
+  text-transform: uppercase;
+  letter-spacing:1px;
+
+}
+::placeholder{
+  color: #9d9b9c;
+}
+.section_3-button2:hover{
+  background-color: #de4a1e;
+  border: 1px solid #de4a1e;
+}
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .section_3 input[type="email"]{
+      width: 300px;
+    }
+    .section_3-button2{
+      width: 150px;
+    }
+
+    .section_3 p:first-of-type {
+      font-size: 40px;
+    }
+  }
+/*----------------  LAPTOP------------------------------------------------*/
+@media only screen and (min-width: 992px) {
+    .section_3 input[type="email"]{
+      width: 370px;
+    }
+    .section_3-button2{
+      width: 200px;
+      padding: 15px 30px;
+    }
+    .section_3 p:first-of-type {
+      font-size: 48px;
+    }
+    .section_3 p:last-of-type {
+        font-size: 20px;
+    }
+    .section_3{
+        padding: 10px 0 80px 0; 
+    }
+    .section_3-icon{
+      width: 70px;
+      height:70px;
+     }
+ 
+}

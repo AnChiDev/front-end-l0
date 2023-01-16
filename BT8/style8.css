@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+body{
+    font-family: Helvetica,sans-serif;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+h1{
+    text-align: left;
+    margin: 5%;
+}
+/*----------part 8---------*/
+.section_8 .title{
+    font-family: serif;
+    font-weight: 300;
+    font-size: 22px;
+    width: 90%;
+    margin: auto;
+}
+.section_8 .para{
+    width: 90%;
+    margin: auto;
+    background-color: #f5f6fa;
+    margin-top: 30px;
+    padding: 10px;
+}
+.section_8 span{
+    color:#badc58;
+}
+.section_8 .content p:last-of-type{
+    font-size: 12px;
+}
+.section_8 .para .content p:first-of-type{
+    font-weight: bold;
+} 
+.section_8 .para .info{
+    display:flex;
+}
+.content{
+    flex-grow: 8
+}
+.section_8 button{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border: 1px solid #e4e4e4;
+    font-size: 25px;
+    background-color:white;
+}
+/* .section_8 .para .content{
+    width: 80%;
+    float: left;
+}
+
+.section_8 .headline, .section_8 p{
+    display: inline-block;
+    
+}
+.section_8 p:first-of-type{
+    width: 98%;
+    margin: 15px auto;
+}*/
+
+
+/*----------part 1---------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .section_8{
+        width: 70%;
+        margin: auto;
+        }
+   
+}
+@media only screen and (min-width: 992px) {
+   .section_8{
+    width: 60%;
+    margin: auto;
+    }
+ .info{
+    margin-bottom: 10px;
+ }
+
+}

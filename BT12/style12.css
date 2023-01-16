@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+  }
+body{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.8;
+}
+h1{
+    text-align: left;
+    margin: 5%;
+}
+ul{
+    list-style: none;
+    color: #b6b6b6;
+}
+::placeholder {
+    color: #b6b6b6;
+  }
+.text-border{
+    border-bottom: 2px solid orange;
+    padding-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 2px 0 #ddd inset;
+  /* Cần cho full-width */
+  box-sizing: border-box;
+  font-size: 15px;
+  padding-left: 20px;
+  width: 100%;
+}
+input[type="text"],
+input[type="email"] {
+  height: 40px;
+}
+textarea {
+  font-family: Helvetica,sans-serif;
+  padding-top: 10px;
+}
+button {
+  background-color: #0cb8b6;
+  border: 1px solid #0cb8b6;
+  color: #fff;
+  cursor: pointer;
+  min-width: 135px;
+  padding: 11px 10px;
+  text-align: center;
+  transition: 0.3s background-color;
+  width: 100%;
+}
+button:hover {
+  background-color: #18ccca;
+}
+/* Layout */
+  .contact-us,.title{
+    margin: 30px auto;
+    width: 90%;
+    margin: auto;
+  }
+  .contact-us .info {
+    float: left;
+  }
+
+  .contact-us h3 {
+    color: #222;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 32px;
+    margin-top: 20px;
+  }
+  .contact-us .contact-list li {
+    line-height: 1.4;
+    margin-bottom: 36px;
+    padding-left: 48px;
+    position: relative;
+  }
+  .contact-us .contact-list li i {
+    font-size: 27px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    width: 34px;
+  }
+  .contact-us .contact-list li a {
+    color: #9a9a9a;
+    text-decoration: none;
+  }
+  .contact-us .contact-form {
+    float: right;
+    width: 100%;
+  }
+  .contact-us .contact-form p {
+    margin-bottom: 15px;
+  }
+
+  
+
+/*----------part 1---------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .contact-us{
+    display: grid;
+    grid-template-columns: 30% 60% ;
+   }
+   .contact-form{
+    margin-left: 80px;
+   }
+}
+@media only screen and (min-width: 992px) {
+  .section_12{
+    width: 75%;
+    margin: auto;
+  }
+  .contact-us{
+    display: grid;
+    grid-template-columns: 30% 65% ;
+   }
+   .contact-form{
+    margin-left: 80px;
+   }
+   button{
+    width: auto;
+   }
+ 
+}

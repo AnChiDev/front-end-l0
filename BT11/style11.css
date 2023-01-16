@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+body{
+    font-family: Helvetica,sans-serif;  
+    box-sizing: border-box;
+}
+h1{
+    text-align: left;
+    margin: 5%;
+}
+/*----------part 11---------*/
+.section_11{
+    width: 80%;
+    margin: auto;
+}
+.section_11 p:first-of-type {
+    font-weight: bold;
+    color: black!important;;
+    font-size: 16px;
+}
+.section_11 span {
+   color: #9a9a9a;
+   font-weight: 600;
+   display: block;
+   font-size: 12px;
+   margin-bottom: 10px;
+}
+.section_11 input[type="text"], .section_11 input[type="email"],.section_11 textarea{
+   margin: 10px 0;
+   width: 97%;
+   border: 1px solid #ccc;
+   padding: 10px;
+}
+.section_11 button{
+   margin-bottom: 10px;
+   background-color: #7dcefd;
+   color: white;
+   border: 1px solid #2e86de;
+   padding: 10px;
+   border-radius: 5px;
+   width: 100%;
+}
+::placeholder {
+    color: #c1c1c1;
+    font-family: Helvetica,sans-serif;  
+}
+button:hover{
+    background-color: #0984e3;
+}
+.last-item{
+    display: flex;
+    flex-direction: column-reverse;
+}
+/*----------part 1---------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .section_11 .last-item{
+        width: 100%;
+    }
+    input[type="email"]{
+        float: none;
+    }
+    .section_11 button{
+        display: inline-block;
+        width: 25%;
+    }
+    .section_11 span {
+        display: inline-block;
+        margin-left: auto;
+        order: 2;
+    }
+    .last-item{
+        display: flex;
+        flex-direction: row;
+    }
+    .section_11 p:first-of-type {
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .section_11{
+        width: 57%;
+        margin: auto;
+    }
+    .section_11 button{
+        display: inline-block;
+        width: auto;
+    }
+    .section_11 span{
+        font-size: 14px;
+    }
+    .section_11 .haft-size{
+        width: 100%;
+        display: flex;
+        flex-direction:row;
+    }
+    .section_11 #name, .section_11 #email{
+        width: 44%;
+    }
+    .section_11 p:first-of-type {
+        font-size: 22px;
+    }
+    .section_11  #email{
+        margin-left: 7%;
+    }
+    .section_11 span {
+        float: right;
+        padding-right: 1%;
+        margin-left: auto;
+        order: 2;
+    }
+    .last-item{
+        display: flex;
+        flex-direction: row;
+    }
+
+}
